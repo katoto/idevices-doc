@@ -9,7 +9,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "dumi build && cp static/* dist/static/",
+    "build": "dumi build",
     "build:watch": "father dev",
     "dev": "dumi dev",
     "doctor": "father doctor",
