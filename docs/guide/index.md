@@ -18,19 +18,6 @@ group:
 
 ## 使用指南
 
-#### 原生 Js Module
-
-```html | pure
-<!DOCTYPE html>
-<head>
-  <!-- src: iDevices cdn 链接 -->
-  <script type="module" src="./iDevices.js"></script>
-</head>
-<body>
-  <i-devices></i-devices>
-</body>
-```
-
 #### React 使用方式
 
 ```bash | pure
@@ -66,6 +53,32 @@ yarn add i-devices
 <script>
 import 'i-devices';
 </script>
+```
+
+#### 原生 Js Module
+
+```
+// 需安装lit 相关依赖 见 https://lit.dev/playground/
+"dependencies": {
+  "lit": "^2.0.0",
+  "@lit/reactive-element": "^1.0.0",
+  "lit-element": "^3.0.0",
+  "lit-html": "^2.0.0"
+}
+```
+
+```html | pure
+<!DOCTYPE html>
+<head>
+  <!-- 参见 https://lit.dev/playground/ -->
+  <script
+    type="module"
+    src="https://unpkg.com/i-devices@0.1.2/dist/iDevices.js"
+  ></script>
+</head>
+<body>
+  <i-devices></i-devices>
+</body>
 ```
 
 <br />
@@ -262,11 +275,11 @@ export default () => (
 
 [根源查看](https://github.com/atlassian/react-beautiful-dnd/blob/master/docs/api/draggable.md#warning-position-fixed) <br />
 原因：position: fixed 会受到父级上的 transform 的影响，导致位置不准确。 <br />
-fixed：开启 usezoom，去除 transform 缩放，改用 zoom 缩放。 或者可以将拖动项移动到 DOM 的另一个位置(document.body)
+解决：开启 usezoom，去除 transform 缩放，改用 zoom 缩放。 或者可以将拖动项移动到 DOM 的另一个位置(document.body)
 
 <br />
 <br />
 
-如果在使用过程中发现任何问题、或者有改善建议，欢迎在 [**GitHub Issues**](https://github.com/innocces/dumi-theme-chakra/issues) 或 [**Discord**](https://discord.gg/N82HK72uJk) 进行反馈
+如果在使用过程中发现任何问题、或者有改善建议，欢迎在 [**GitHub Issues**](https://github.com/HuolalaTech/i-devices/issues) 进行反馈
 
 <br />

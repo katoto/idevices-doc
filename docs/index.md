@@ -7,7 +7,7 @@ hero:
       link: /guide
     - text: Github
       icon: github
-      link: /
+      link: https://github.com/HuolalaTech/i-devices
 features:
   - title: 多设备
     icon: https://api.iconify.design/logos:randomcolor.svg
