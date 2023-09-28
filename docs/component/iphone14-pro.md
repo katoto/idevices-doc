@@ -6,38 +6,45 @@ group:
 order: 1
 ---
 
-# iPhone 15
+# iPhone 14 Pro
 
-iPhone15 是一款性能强劲、功能全面、使用体验出色的智能手机。搭载的 A16 处理器使得处理能力和图形性能更强大，可轻松应对各种需求。同时，iPhone15 还支持 5G 网络、Wi-Fi 6 和蓝牙 5.0 等先进的通信技术，提供稳定高速的网络连接。此外，IP68 级别的防水防尘功能使得 iPhone15 可以在不同环境下安心使用。
+iPhone 14 Pro，苹果的旗舰手机。A16 芯片提供强大处理能力，iOS 16 操作系统带来智能体验。出色的摄影能力，4800 万像素主摄+1200 万像素超广角+1200 万像素长焦。ProMotion 技术的超视网膜 XDR 显示屏，流畅细腻。集强大性能、优秀摄影和精彩显示于一身，带来卓越手机体验。
 
-iPhone 15 is a powerful, feature-packed, and exceptional smart phone experience. It is equipped with the A16 processor, which provides enhanced processing and graphics capabilities to easily handle various demands. Additionally, iPhone 15 supports advanced communication technologies like 5G networks, Wi-Fi 6, and Bluetooth 5.0, providing stable and high-speed network connectivity. Moreover, its IP68-rated waterproof and dustproof features ensure that iPhone 15 can be used confidently in different environments.
+iPhone 14 Pro is Apple's flagship smartphone. The A16 chip provides powerful processing capability, while the iOS 16 operating system offers an intelligent experience. With outstanding photography capabilities, it features a 48MP main camera, a 12MP ultra-wide-angle lens, and a 12MP telephoto lens. The ProMotion technology on the ultra-high-definition XDR display ensures smooth and detailed visuals. Combining impressive performance, excellent photography, and stunning display, the iPhone 14 Pro delivers an exceptional mobile experience.
 
 ```tsx
 import { Row, Slider, Tooltip } from 'antd';
 import 'antd/dist/antd.css';
 import { IDevicesReact } from 'i-devices';
-// import { IDevicesReact } from '../../src/index.ts';
 import React, { useState } from 'react';
 
-type ColorTypes = 'device-gold' | 'device-silver' | 'device-pink';
+type ColorTypes =
+  | 'device-gold'
+  | 'device-purple'
+  | 'device-silver'
+  | 'device-black';
 
 const ModelColorMap: { name: ColorTypes; bgColor: string }[] = [
   {
     name: 'device-gold',
-    bgColor: '#e7d19e',
+    bgColor: '#342C3F',
+  },
+  {
+    name: 'device-purple',
+    bgColor: '#e2e3e4',
   },
   {
     name: 'device-silver',
-    bgColor: '#c8cacb',
+    bgColor: '#76726F',
   },
   {
-    name: 'device-pink',
-    bgColor: '#ef72a5',
+    name: 'device-black',
+    bgColor: '#F6EEDB',
   },
 ];
 
 export default function () {
-  const [actColor, setActColor] = useState<ColorTypes>('device-pink');
+  const [actColor, setActColor] = useState<ColorTypes>('device-silver');
   const [scale, setScale] = useState<number>(0.9);
   const dotStyle: React.CSSProperties = {
     background: '#eee',
@@ -99,7 +106,7 @@ export default function () {
       <Row justify="center">
         {/* html 设备主体 */}
         <IDevicesReact
-          modelname="device-iphone-15"
+          modelname="device-iphone-14-pro"
           modelColor={actColor}
           scale={scale}
           usezoom={true}
@@ -107,7 +114,7 @@ export default function () {
           <img
             slot="slot-screen"
             className="device-screen"
-            src="/img/bg-iphone-15.jpeg"
+            src="/img/bg-iphone-14-pro.jpg"
             loading="lazy"
           />
         </IDevicesReact>
@@ -126,15 +133,38 @@ import React from 'react';
 export default function () {
   return (
     <div style={{ width: '350px', margin: '0 auto' }}>
-      <IDevicesReact
-        modelname="device-iphone-15"
-        modelcolor="device-pink"
-        modelbar={true}
-        bartitle="demo标题"
-      >
+      <IDevicesReact modelbar={true} bartitle="demo标题">
         <div slot="slot-screen">自定义内容</div>
       </IDevicesReact>
     </div>
   );
 }
 ```
+
+“源码”展示，如果你不想安装依赖，也可以一键复制以下代码，直接到业务上使用，0 依赖～
+
+```tsx
+import React from 'react';
+import '../assets/css/_iphone-14-pro.scss';
+
+export default function () {
+  return (
+    <div>
+      {/* html 主体 */}
+      <div className="device device-iphone-14-pro">
+        <div className="device-frame">
+          <img className="device-screen" src="/img/bg-03.jpg" loading="lazy" />
+        </div>
+        <div className="device-stripe"></div>
+        <div className="device-header"></div>
+        <div className="device-sensors"></div>
+        <div className="device-btns"></div>
+        <div className="device-power"></div>
+        <div className="device-home"></div>
+      </div>
+    </div>
+  );
+}
+```
+
+<br />
