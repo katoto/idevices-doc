@@ -39,7 +39,7 @@
     "@lit-labs/react": "^1.2.0",
     "antd": "4.24.10",
     "dumi-theme-chakra": "^0.0.20",
-    "i-devices": "^0.1.3",
+    "i-devices": "^0.1.4",
     "lit": "^2.7.5"
   },
   "devDependencies": {
