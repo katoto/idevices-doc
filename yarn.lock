@@ -7310,10 +7310,10 @@ husky@^8.0.1:
   resolved "https://registry.yarnpkg.com/husky/-/husky-8.0.3.tgz#4936d7212e46d1dea28fef29bb3a108872cd9184"
   integrity sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==
 
-i-devices@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/i-devices/-/i-devices-0.1.1.tgz#ab044c0d1ba903431ce17124ec1d4ee6184c7c1a"
-  integrity sha512-NdiYVWvam9Q7Nb8Q0Xnlt4BoPLBPS+z5Hhzfvh8RRTOWr48vJMMXb4VqsQyenxP1+ye+yU2TVMwKcvrRWLJXEg==
+i-devices@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/i-devices/-/i-devices-0.1.3.tgz#bf656e17d644388b8fe517e47551c67a9d456cd9"
+  integrity sha512-isWvwDfsg1rn4OHjGcU6pchypn1KKxWKy0kIhJn0D73lNXb/ErqkHnufzHmBrsNLYvZL7bI50SXETdUyxLyuNw==
   dependencies:
     "@lit-labs/react" "^1.2.0"
     lit "^2.7.5"

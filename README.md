@@ -11,19 +11,6 @@
 
 ## 使用指南
 
-#### 原生 Js Module
-
-```html | pure
-<!DOCTYPE html>
-<head>
-  <!-- src: iDevices cdn 链接 -->
-  <script type="module" src="./iDevices.js"></script>
-</head>
-<body>
-  <i-devices></i-devices>
-</body>
-```
-
 #### React 使用方式
 
 ```bash | pure
@@ -59,6 +46,32 @@ yarn add i-devices
 <script>
 import 'i-devices';
 </script>
+```
+
+#### 原生 Js Module
+
+```
+// 需安装lit 相关依赖 见 https://lit.dev/playground/
+"dependencies": {
+  "lit": "^2.0.0",
+  "@lit/reactive-element": "^1.0.0",
+  "lit-element": "^3.0.0",
+  "lit-html": "^2.0.0"
+}
+```
+
+```html | pure
+<!DOCTYPE html>
+<head>
+  <!-- 参见 https://lit.dev/playground/ -->
+  <script
+    type="module"
+    src="https://unpkg.com/i-devices@0.1.2/dist/iDevices.js"
+  ></script>
+</head>
+<body>
+  <i-devices></i-devices>
+</body>
 ```
 
 <br />
